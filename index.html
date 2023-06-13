@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<Head>
+    <meta charser="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+    <title>admin page</title>
+
+    <!-- custom css file link-->
+    <link rel="stylesheet" href="css/indexbg.css">
+
+</Head>
+<body>
+
+<div class="container">
+    <h3>Haloo <span></span></h3>
+    <h2>    Selamat Datang di <span></span></h2>
+    <header>
+    <h1> Sistem Inventarisasi Lahan Pertanian</h1>
+    <h3>Jika ingin update data lahan pertanian, pilih login, jika belum memiliki akun, daftar terlebih dahulu</h3>
+</header>
+    <a href="login.html"class="btn">login</a>
+    <a href="register.html" class="btn">register</a>
+    <br>
+    <p> Bisa Langsung Mengakses peta dibawah</p>
+    <br>
+    <iframe src="https://websip-datatanah-sip-ilb.netlify.app/#16/-7.2838/110.3909" width="1000" height="500" frameborder="0"></iframe>
+</div>
+<script>
+    // Mendapatkan elemen tombol login
+    var loginBtn = document.querySelector('a[href="login.html"]');
+
+    // Menangani klik tombol login
+    loginBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah pengarahan ke halaman login.html
+
+        // Memeriksa peran pengguna berdasarkan role yang ingin diakses
+        var role = prompt('Masukkan peran Anda "ketik salah satu"(admin, user, atau surveyor):');
+
+        // Mengarahkan pengguna ke halaman login sesuai dengan peran yang dimasukkan
+        if (role === 'admin') {
+            window.location.href = 'loginadmin.html';
+        } else if (role === 'user') {
+            window.location.href = 'loginuser.html';
+        } else if (role === 'surveyor') {
+            window.location.href = 'loginsurveyor.html';
+        } else {
+            alert('Peran yang dimasukkan tidak valid. Silakan coba lagi.');
+        }
+    });
+</script>
+</body>
+</html>
+
+</body>
+<html>
+
+</html>

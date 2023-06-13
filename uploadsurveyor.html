@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Data Survey Lapangan</title>
+  <!-- custom css file link-->
+  <link rel="stylesheet" href="css/formupload.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Data Survey Lapangan</h1>
+    <form action="hasildaftar.html" method="POST" enctype="multipart/form-data" class="form-login">
+      <label for="nama_surveyor">Nama Surveyor:</label><br>
+      <input type="text" id="nama_surveyor" name="nama_surveyor" required><br><br>
+      
+      <label for="waktu_survey">Waktu Survey:</label><br>
+      <input type="date" id="waktu_survey" name="waktu_survey" required><br><br>
+      
+      <label for="upload_berkas">Upload Berkas Survey:</label><br>
+      <input type="file" id="upload_berkas" name="upload_berkas" required><br><br>
+      
+      <label for="keterangan">Keterangan:</label><br>
+      <textarea id="keterangan" name="keterangan" rows="4" cols="50"></textarea><br><br>
+      
+      <input type="submit" value="Upload" class="btn-login">
+    </form>
+  </div>
+</body>
+</html>
