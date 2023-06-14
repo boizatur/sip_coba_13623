@@ -8,7 +8,7 @@
 <body>
   <div class="container">
     <h1>Upload Data Survey Lapangan</h1>
-    <form action="hasildaftar.html" method="POST" enctype="multipart/form-data" class="form-login">
+    <form action="login.php" method="POST" enctype="multipart/form-data" class="form-login">
       <label for="nama_surveyor">Nama Surveyor:</label><br>
       <input type="text" id="nama_surveyor" name="nama_surveyor" required><br><br>
       
@@ -24,5 +24,25 @@
       <input type="submit" value="Upload" class="btn-login">
     </form>
   </div>
+
+  <script>
+    // Mendapatkan elemen form
+     var form = document.querySelector('form');
+
+     // Menangani submit form
+     form.addEventListener('submit', function(event) {
+     event.preventDefault(); // Mencegah pengiriman form
+
+     // Mendapatkan nilai input username dan password
+     var usernameInput = document.getElementById('username').value;
+     var passwordInput = document.getElementById('password').value;
+
+     // Memeriksa apakah username dan password sesuai
+
+     // Arahkan ke halaman hasildaftar.html setelah mengklik tombol register
+     window.location.href = 'hasildaftar.html';
+     });
+ </script>
+
 </body>
 </html>

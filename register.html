@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Pendaftaran</h1>
-        <form action="hasildaftar.html" method="POST">
+        <form action="login.php" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username" required>
@@ -48,8 +48,30 @@
                 <br>
                 <br>
                 <button type="submit" class="btn">Register</button>
+            
         </form>
         <p>Already have an account? <a href="index.html">Login</a></p>
     </div>
+
+
+                    <script>
+                       // Mendapatkan elemen form
+                        var form = document.querySelector('form');
+
+                        // Menangani submit form
+                        form.addEventListener('submit', function(event) {
+                        event.preventDefault(); // Mencegah pengiriman form
+
+                        // Mendapatkan nilai input username dan password
+                        var usernameInput = document.getElementById('username').value;
+                        var passwordInput = document.getElementById('password').value;
+
+                        // Memeriksa apakah username dan password sesuai
+
+                        // Arahkan ke halaman hasildaftar.html setelah mengklik tombol register
+                        window.location.href = 'hasildaftar.html';
+                        });
+                    </script>
+
 </body>
 </html>
